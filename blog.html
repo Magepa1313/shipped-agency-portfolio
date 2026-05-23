@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Webdesign Insights | Maximilian Kürner</title>
+  <meta name="description" content="Kurze, direkte Posts über Webdesign, Conversion und was wirklich funktioniert. Von Maximilian Kürner, Webdesign Freelance aus Wels." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://maximiliankuerner.at/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog — Webdesign Insights | Maximilian Kürner" />
+  <meta property="og:description" content="Kurze, direkte Posts über Webdesign, Conversion und was wirklich funktioniert." />
+  <meta property="og:url" content="https://maximiliankuerner.at/blog.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06070c;
+      --acid: #c8ff00;
+      --text: #f0f0f0;
+      --muted: rgba(240,240,240,.42);
+      --bord: rgba(255,255,255,.08);
+      --surf: rgba(255,255,255,.04);
+      --font: 'Bricolage Grotesque', system-ui, sans-serif;
+      --r: 16px;
+      --tr: 0.22s cubic-bezier(.4,0,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 100px; font-family: var(--font); font-size: .9rem; font-weight: 700; letter-spacing: .01em; cursor: pointer; white-space: nowrap; transition: transform var(--tr), box-shadow var(--tr), background var(--tr); }
+    .btn-acid { background: var(--acid); color: #06070c; border: 1px solid rgba(200,255,0,.6); box-shadow: 0 4px 22px rgba(200,255,0,.32); }
+    .btn-acid:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,255,0,.48); }
+    .btn-glass { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.13); backdrop-filter: blur(12px); }
+    .btn-glass:hover { background: rgba(255,255,255,.11); transform: translateY(-2px); }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 0; background: rgba(6,7,12,.82); backdrop-filter: blur(24px); border-bottom: 1px solid var(--bord); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 1rem; font-weight: 400; display: flex; align-items: center; gap: 11px; }
+    .nav-logo-name { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-logo-name .ln1 { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .nav-logo-name .ln2 { font-size: 1rem; font-weight: 800; letter-spacing: -.02em; }
+    .nav-mark { width: 40px; height: 40px; background: var(--acid); border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; box-shadow: 0 2px 12px rgba(200,255,0,.35); }
+    .nav-mark svg { width: 22px; height: 15px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-link { font-size: .875rem; font-weight: 600; color: var(--muted); transition: color var(--tr); }
+    .nav-link:hover, .nav-link.on { color: var(--text); }
+
+    .page-hero { padding: 140px 24px 80px; text-align: center; }
+    .ey { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--acid); margin-bottom: 16px; }
+    .h1 { font-size: clamp(2.5rem,6vw,5rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.04; margin-bottom: 16px; }
+    .grad { background: linear-gradient(135deg,#c8ff00 0%,#80ff9e 50%,#00e5c3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 480px; margin: 0 auto; }
+
+    .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 52px; padding-bottom: 80px; }
+    .blog-card { border-radius: 20px; border: 1px solid var(--bord); background: var(--surf); padding: 32px; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: border-color var(--tr), box-shadow var(--tr), transform var(--tr); }
+    .blog-card:hover { border-color: rgba(200,255,0,.2); box-shadow: 0 16px 48px rgba(0,0,0,.35); transform: translateY(-3px); }
+    .blog-tag { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--acid); margin-bottom: 12px; }
+    .blog-title { font-size: 1.08rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.3; margin-bottom: 12px; }
+    .blog-excerpt { font-size: .875rem; color: var(--muted); line-height: 1.65; flex: 1; margin-bottom: 20px; }
+    .blog-foot { display: flex; align-items: center; justify-content: space-between; font-size: .78rem; }
+    .blog-date { color: var(--muted); }
+    .blog-read { color: var(--acid); font-weight: 700; }
+
+    footer { border-top: 1px solid var(--bord); padding: 28px 0; }
+    .ft { display: flex; align-items: center; justify-content: space-between; font-size: .82rem; color: var(--muted); }
+
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">
+          <div class="nav-mark">
+            <svg viewBox="0 0 22 15" fill="none" stroke="#06070c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1,14 1,1 5.5,8 10,1 10,14" />
+              <line x1="13" y1="1" x2="13" y2="14" />
+              <line x1="13" y1="7.5" x2="21" y2="1" />
+              <line x1="13" y1="7.5" x2="21" y2="14" />
+            </svg>
+          </div>
+          <div class="nav-logo-name">
+            <span class="ln1">Webdesign Freelance</span>
+            <span class="ln2">Maximilian Kürner</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html#results">Ergebnisse</a></li>
+          <li><a class="nav-link" href="index.html#about">Über mich</a></li>
+          <li><a class="nav-link on" href="blog.html">Blog</a></li>
+          <li><a class="nav-link" href="index.html#contact">Kontakt</a></li>
+        </ul>
+        <a class="btn btn-acid" href="index.html#contact" style="padding:10px 20px;font-size:.82rem;">Projekt starten →</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="ey">// Insights</div>
+    <h1 class="h1">Was ich über <span class="grad">Websites</span> gelernt hab.</h1>
+    <p class="hero-sub">Kurze, direkte Posts über Conversion, Design und was wirklich funktioniert.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="blog-grid">
+
+      <a class="blog-card" href="posts/vorher-nachher-satao.html">
+        <div class="blog-tag">Case Study</div>
+        <h2 class="blog-title">Vorher vs. Nachher: Was ich an der Satao-Website geändert hab — und warum</h2>
+        <p class="blog-excerpt">Konkret. Welche Entscheidungen ich getroffen hab, was ich weggelassen hab, und was der Unterschied zwischen einer Website die existiert und einer die arbeitet ist.</p>
+        <div class="blog-foot">
+          <span class="blog-date">22. Mai 2026</span>
+          <span class="blog-read">4 min →</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="posts/warum-billige-websites-mehr-kosten.html">
+        <div class="blog-tag">Business</div>
+        <h2 class="blog-title">Warum eine 200€ Website teurer ist als eine für 500€</h2>
+        <p class="blog-excerpt">Eine Website die keine Kunden bringt kostet dich jeden Monat Geld — auch wenn du nichts zahlst. Die Rechnung die die meisten nicht machen.</p>
+        <div class="blog-foot">
+          <span class="blog-date">18. Mai 2026</span>
+          <span class="blog-read">3 min →</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="posts/warum-ich-websites-in-48h-liefere.html">
+        <div class="blog-tag">Prozess</div>
+        <h2 class="blog-title">Warum ich Websites in 48h liefere — und was das für dich bedeutet</h2>
+        <p class="blog-excerpt">Nicht weil ich schnell hinpfusche. Sondern weil langsame Lieferung ein strukturelles Problem ist — nicht ein Qualitätsmerkmal.</p>
+        <div class="blog-foot">
+          <span class="blog-date">15. Mai 2026</span>
+          <span class="blog-read">3 min →</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="posts/3-sachen-ich-bau-die-website.html">
+        <div class="blog-tag">Angebot</div>
+        <h2 class="blog-title">Du schickst mir 3 Sachen. Ich bau die Website. Fertig.</h2>
+        <p class="blog-excerpt">Kein langes Briefing-Dokument, kein 5-Runden-Feedback, keine Überraschungen. So sieht mein Prozess aus — von Minute 1 bis Live.</p>
+        <div class="blog-foot">
+          <span class="blog-date">10. Mai 2026</span>
+          <span class="blog-read">2 min →</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="posts/was-passiert-wenn-deine-website-auf-seite-1-steht.html">
+        <div class="blog-tag">SEO</div>
+        <h2 class="blog-title">Was passiert wenn deine Website plötzlich auf Seite 1 von Google steht</h2>
+        <p class="blog-excerpt">Nicht die technische Erklärung — das konkrete Bild. Telefon klingelt, Kalender voll, Kunden die schon kaufbereit ankommen.</p>
+        <div class="blog-foot">
+          <span class="blog-date">5. Mai 2026</span>
+          <span class="blog-read">3 min →</span>
+        </div>
+      </a>
+
+      <!-- NEUEN POST HIER EINFÜGEN — Karte duplizieren, Datei in /posts/ erstellen -->
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap ft">
+      <div>Shipped. — Maximilian Kürner</div>
+      <div>© <script>document.write(new Date().getFullYear())</script> Maximilian Kürner</div>
+    </div>
+  </footer>
+
+</body>
+</html>
