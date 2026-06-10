@@ -4,29 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Warum deine Website keine Kunden bringt — Maximilian Kürner</title>
-  <meta name="description" content="Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen. Das ist der Unterschied zwischen einer Website und einem Werkzeug." />
+  <meta name="description" content="Die meisten Websites haben einen Besucher. Und einen Ausgang. Keine Anfrage, kein Anruf. Drei Gründe warum — und was dagegen hilft." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Warum deine Website keine Kunden bringt" />
-  <meta property="og:description" content="Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen." />
+  <meta property="og:description" content="Die meisten Websites haben einen Besucher. Und einen Ausgang. Keine Anfrage, kein Anruf." />
   <meta property="og:url" content="https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html" />
-  <meta property="article:published_time" content="2026-05-22" />
+  <meta property="article:published_time" content="2026-05-10" />
   <meta property="article:author" content="Maximilian Kürner" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Warum deine Website keine Kunden bringt — und wie du das fixst",
+    "headline": "Warum deine Website keine Kunden bringt",
     "author": { "@type": "Person", "name": "Maximilian Kürner" },
-    "datePublished": "2026-05-22",
-    "description": "Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen.",
+    "datePublished": "2026-05-10",
+    "description": "Die meisten Websites haben einen Besucher. Und einen Ausgang.",
     "url": "https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html"
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=bricolage-grotesque:400,700,800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #06070c;
@@ -59,8 +58,27 @@
     .nav-logo-name { display: flex; flex-direction: column; line-height: 1.15; }
     .nav-logo-name .ln1 { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
     .nav-logo-name .ln2 { font-size: 1rem; font-weight: 800; letter-spacing: -.02em; }
-    .nav-mark { width: 40px; height: 40px; background: var(--acid); border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; }
-    .nav-mark svg { width: 22px; height: 15px; }
+    .nav-mark {
+      width: 38px;
+      height: 38px;
+      background: rgba(200,255,0,.06);
+      border: 1.5px solid rgba(200,255,0,.28);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-size: .88rem;
+      font-weight: 800;
+      color: var(--acid);
+      letter-spacing: -.04em;
+      user-select: none;
+      transition: border-color .22s, background .22s;
+    }
+    .nav-mark:hover {
+      border-color: rgba(200,255,0,.55);
+      background: rgba(200,255,0,.1);
+    }
     .nav-links { display: flex; gap: 28px; }
     .nav-link { font-size: .875rem; font-weight: 600; color: var(--muted); transition: color var(--tr); }
     .nav-link:hover { color: var(--text); }
@@ -101,14 +119,7 @@
     <div class="wrap">
       <div class="nav-inner">
         <a class="nav-logo" href="../index.html">
-          <div class="nav-mark">
-            <svg viewBox="0 0 22 15" fill="none" stroke="#06070c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="1,14 1,1 5.5,8 10,1 10,14" />
-              <line x1="13" y1="1" x2="13" y2="14" />
-              <line x1="13" y1="7.5" x2="21" y2="1" />
-              <line x1="13" y1="7.5" x2="21" y2="14" />
-            </svg>
-          </div>
+          <div class="nav-mark" aria-hidden="true">mk</div>
           <div class="nav-logo-name">
             <span class="ln1">Webdesign Freelance</span>
             <span class="ln2">Maximilian Kürner</span>
@@ -127,11 +138,11 @@
 
   <div class="post-header">
     <div class="post-tag">Conversion</div>
-    <h1 class="post-title">Warum deine Website keine Kunden bringt — und wie du das fixst</h1>
+    <h1 class="post-title">Warum deine Website keine Kunden bringt</h1>
     <div class="post-meta">
-      <span>22. Mai 2026</span>
+      <span>10. Mai 2026</span>
       <span>·</span>
-      <span>3 min Lesezeit</span>
+      <span>4 min Lesezeit</span>
     </div>
   </div>
 
@@ -140,53 +151,60 @@
 
       <a class="back-link" href="../blog.html">← Zurück zum Blog</a>
 
-      <!-- ═══════════════════════════════════════════
-           INHALT — hier schreiben oder ersetzen
-      ════════════════════════════════════════════ -->
+      <p>Ich schau mir regelmäßig Websites von Handwerkern, Ärzten und lokalen Dienstleistern an. Und fast immer läuft es auf dasselbe hinaus: Die Website existiert. Aber sie <strong>arbeitet nicht.</strong></p>
 
-      <p>Die meisten Websites werden mit einer einzigen Frage gebaut: <strong>Wie kann ich das gut aussehen lassen?</strong> Das ist das Problem.</p>
+      <p>Kein Anruf, keine Anfrage, keine Buchung. Einfach: nichts. Das liegt meistens nicht daran, dass die Website schlecht ausschaut. Es liegt daran, dass sie drei Grundfragen des Besuchers nicht beantwortet — und der geht dann einfach wieder weg.</p>
 
-      <p>Gut aussehen und Kunden bringen sind zwei verschiedene Dinge. Eine Website die nur gut ausschaut ist wie ein Schaufenster das niemand findet — oder das zwar gefunden wird, aber keinen Eingang hat.</p>
+      <h2>Die drei Fragen die jeder Besucher stellt</h2>
 
-      <h2>Was eine Website wirklich tun muss</h2>
-
-      <p>Wenn jemand auf deine Website kommt, hat er drei Sekunden um zu entscheiden ob er bleibt. In diesen drei Sekunden stellt er sich eine Frage: <strong>„Ist das für mich?"</strong></p>
-
-      <p>Wenn die Antwort nicht sofort klar ist, ist er weg. Zurück zu Google. Zu deinem Mitbewerber.</p>
-
-      <div class="highlight">
-        <p>Die wichtigste Zeile auf jeder Website ist die Headline. Nicht das Logo, nicht die Farben — die Headline. Sie muss in einem Satz sagen wer du bist, was du machst, und warum es dem Besucher wichtig ist.</p>
-      </div>
-
-      <h2>Die drei häufigsten Fehler</h2>
-
-      <h3>1. Keine klare Handlungsaufforderung</h3>
-      <p>Was soll der Besucher tun? Anrufen? Schreiben? Buchen? Wenn das nicht offensichtlich ist, macht er gar nichts. Ein klarer CTA — sichtbar, einmal, above the fold — verdoppelt die Conversion in vielen Fällen.</p>
-
-      <h3>2. Über das Unternehmen statt über den Kunden</h3>
-      <p>„Wir sind seit 1998 tätig und bieten hochwertige Leistungen..." — wen interessiert das? Den Kunden interessiert nur eine Sache: Was habe ich davon? Schreib über den Kunden, nicht über dich.</p>
-
-      <h3>3. Kein Social Proof</h3>
-      <p>Bewertungen, echte Fotos, konkrete Ergebnisse. Menschen kaufen was andere empfehlen. Ohne Social Proof kauft niemand von dir, egal wie gut die Website aussieht.</p>
-
-      <h2>Was du heute ändern kannst</h2>
+      <p>Wenn jemand auf deine Website kommt, hat er drei Sekunden. In diesen drei Sekunden stellt er sich — bewusst oder nicht — drei Fragen:</p>
 
       <ul>
-        <li>Lies deine Headline laut vor. Würde ein Fremder in 3 Sekunden verstehen was du machst?</li>
-        <li>Zähl deine CTAs. Wenn du keinen hast, füge einen ein. Wenn du fünf hast, streiche vier.</li>
-        <li>Füge eine echte Kundenbewertung hinzu. Auch eine reicht.</li>
+        <li><strong>Ist das für mich?</strong> — Bin ich hier richtig? Macht diese Person/Firma was ich suche?</li>
+        <li><strong>Kann ich dem vertrauen?</strong> — Gibt es Beweise, Bewertungen, echte Ergebnisse?</li>
+        <li><strong>Was soll ich jetzt tun?</strong> — Anrufen? Schreiben? Formular ausfüllen?</li>
       </ul>
 
-      <p>Das sind keine Design-Entscheidungen. Das sind Business-Entscheidungen. Und sie kosten nichts außer 30 Minuten Zeit.</p>
+      <p>Wenn eine dieser drei Fragen nicht sofort beantwortet wird — weg. Zurück zu Google. Zum Nächsten.</p>
 
-      <!-- ═══════════════════════════════════════════
-           ENDE INHALT
-      ════════════════════════════════════════════ -->
+      <div class="highlight">
+        <p>Der Besucher entscheidet nicht bewusst. Er <em>fühlt</em> ob er richtig ist. Und dieses Gefühl entsteht in den ersten drei Sekunden — aus Headline, Design und dem ersten Satz den er liest.</p>
+      </div>
+
+      <h2>Fehler 1: Eine Headline die über dich spricht statt über ihn</h2>
+
+      <p>„Willkommen bei Installateur Maier" — das beantwortet keine der drei Fragen. Es sagt wer du bist, aber nicht was das dem Besucher bringt. Warum er hier bleiben soll. Was er bekommt.</p>
+
+      <p>Eine funktionierende Headline spricht das Problem des Besuchers an. Nicht deinen Namen, nicht deine Geschichte. Sondern <strong>sein Problem und deine Lösung.</strong> „Wasserrohrbruch? Wir sind in 60 Minuten bei Ihnen." Das ist eine Headline die hält.</p>
+
+      <h2>Fehler 2: Kein Social Proof above the fold</h2>
+
+      <p>Bewertungen, Kundenstimmen, konkrete Ergebnisse — das ist der Unterschied zwischen „klingt ganz gut" und „dem vertrau ich." Und fast keine Website zeigt das dort wo es wirkt: <strong>ganz oben, bevor der Besucher scrollt.</strong></p>
+
+      <p>Google-Bewertungen, eine Zahl (z.B. „127 zufriedene Kunden"), ein echter Name mit echtem Zitat — das kostet nichts und macht den Unterschied zwischen einer Anfrage und einem Absprung.</p>
+
+      <h2>Fehler 3: Zu viele Optionen, kein klarer Weg</h2>
+
+      <p>Fünf Navigationspunkte, drei Buttons, zwei Formulare, eine Telefonnummer und ein Kontaktbereich irgendwo unten. Der Besucher weiß nicht wo er anfangen soll — also fängt er gar nicht an.</p>
+
+      <p>Jede Seite braucht genau <strong>einen primären CTA.</strong> Einer. Klar, sichtbar, überzeugend. „Jetzt Termin vereinbaren." „Kostenlos anfragen." „Angebot anfordern." Mehr braucht es nicht — und weniger ist fast immer mehr.</p>
+
+      <h2>Was du jetzt tun kannst</h2>
+
+      <p>Öffne deine Website auf deinem Handy. Stell dir vor du kennst die Seite nicht. Jetzt beantworte drei Fragen:</p>
+
+      <ul>
+        <li>Verstehe ich in 3 Sekunden was diese Firma macht und wem sie hilft?</li>
+        <li>Gibt es irgendeinen Beweis dass andere zufrieden waren?</li>
+        <li>Weiß ich sofort was ich jetzt tun soll?</li>
+      </ul>
+
+      <p>Wenn du auch nur eine dieser Fragen mit Nein beantwortest — dann weißt du warum keine Anfragen kommen.</p>
 
       <div class="post-cta">
-        <h3>Deine Website hat diese Probleme?</h3>
-        <p>Ich schau sie mir kostenlos an und sag dir direkt was nicht stimmt — in 15 Minuten.</p>
-        <a class="btn btn-acid" href="../index.html#contact">Kostenloses Gespräch →</a>
+        <h3>Ich schau mir deine Website an. Gratis.</h3>
+        <p>Schick mir deinen Website-Link und ich bau dir in 48h eine kostenlose Demo — wie sie aussehen könnte wenn sie wirklich funktioniert. Kein Gespräch nötig, kein Druck, kein Vertrag.</p>
+        <a class="btn btn-acid" href="https://wa.me/4367764278292?text=Hey%20Maximilian%2C%20hier%20ist%20mein%20Website-Link%3A%20" target="_blank" rel="noopener">Demo anfordern (WhatsApp) →</a>
       </div>
 
       <a class="back-link" href="../blog.html">← Zurück zum Blog</a>

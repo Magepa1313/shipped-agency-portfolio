@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Warum deine Website keine Kunden bringt — Maximilian Kürner</title>
-  <meta name="description" content="Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen. Das ist der Unterschied zwischen einer Website und einem Werkzeug." />
+  <title>Vorher vs. Nachher: Was ich an der Satao-Website geändert hab — Maximilian Kürner</title>
+  <meta name="description" content="Konkret. Welche Entscheidungen ich getroffen hab, was ich weggelassen hab, und was der Unterschied zwischen einer Website die existiert und einer die arbeitet ist." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html" />
+  <link rel="canonical" href="https://maximiliankuerner.at/posts/vorher-nachher-satao.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Warum deine Website keine Kunden bringt" />
-  <meta property="og:description" content="Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen." />
-  <meta property="og:url" content="https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html" />
+  <meta property="og:title" content="Vorher vs. Nachher: Was ich an der Satao-Website geändert hab" />
+  <meta property="og:description" content="Konkret. Welche Entscheidungen ich getroffen hab, was ich weggelassen hab, und was der Unterschied zwischen einer Website die existiert und einer die arbeitet ist." />
+  <meta property="og:url" content="https://maximiliankuerner.at/posts/vorher-nachher-satao.html" />
   <meta property="article:published_time" content="2026-05-22" />
   <meta property="article:author" content="Maximilian Kürner" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Warum deine Website keine Kunden bringt — und wie du das fixst",
+    "headline": "Vorher vs. Nachher: Was ich an der Satao-Website geändert hab — und warum",
     "author": { "@type": "Person", "name": "Maximilian Kürner" },
     "datePublished": "2026-05-22",
-    "description": "Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen.",
-    "url": "https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html"
+    "description": "Konkret. Welche Entscheidungen, was weggelassen, was der Unterschied ist.",
+    "url": "https://maximiliankuerner.at/posts/vorher-nachher-satao.html"
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=bricolage-grotesque:400,700,800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #06070c;
@@ -59,8 +58,27 @@
     .nav-logo-name { display: flex; flex-direction: column; line-height: 1.15; }
     .nav-logo-name .ln1 { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
     .nav-logo-name .ln2 { font-size: 1rem; font-weight: 800; letter-spacing: -.02em; }
-    .nav-mark { width: 40px; height: 40px; background: var(--acid); border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; }
-    .nav-mark svg { width: 22px; height: 15px; }
+    .nav-mark {
+      width: 38px;
+      height: 38px;
+      background: rgba(200,255,0,.06);
+      border: 1.5px solid rgba(200,255,0,.28);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-size: .88rem;
+      font-weight: 800;
+      color: var(--acid);
+      letter-spacing: -.04em;
+      user-select: none;
+      transition: border-color .22s, background .22s;
+    }
+    .nav-mark:hover {
+      border-color: rgba(200,255,0,.55);
+      background: rgba(200,255,0,.1);
+    }
     .nav-links { display: flex; gap: 28px; }
     .nav-link { font-size: .875rem; font-weight: 600; color: var(--muted); transition: color var(--tr); }
     .nav-link:hover { color: var(--text); }
@@ -101,14 +119,7 @@
     <div class="wrap">
       <div class="nav-inner">
         <a class="nav-logo" href="../index.html">
-          <div class="nav-mark">
-            <svg viewBox="0 0 22 15" fill="none" stroke="#06070c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="1,14 1,1 5.5,8 10,1 10,14" />
-              <line x1="13" y1="1" x2="13" y2="14" />
-              <line x1="13" y1="7.5" x2="21" y2="1" />
-              <line x1="13" y1="7.5" x2="21" y2="14" />
-            </svg>
-          </div>
+          <div class="nav-mark" aria-hidden="true">mk</div>
           <div class="nav-logo-name">
             <span class="ln1">Webdesign Freelance</span>
             <span class="ln2">Maximilian Kürner</span>
@@ -126,12 +137,12 @@
   </nav>
 
   <div class="post-header">
-    <div class="post-tag">Conversion</div>
-    <h1 class="post-title">Warum deine Website keine Kunden bringt — und wie du das fixst</h1>
+    <div class="post-tag">Case Study</div>
+    <h1 class="post-title">Vorher vs. Nachher: Was ich an der Satao-Website geändert hab — und warum</h1>
     <div class="post-meta">
       <span>22. Mai 2026</span>
       <span>·</span>
-      <span>3 min Lesezeit</span>
+      <span>4 min Lesezeit</span>
     </div>
   </div>
 
@@ -144,49 +155,44 @@
            INHALT — hier schreiben oder ersetzen
       ════════════════════════════════════════════ -->
 
-      <p>Die meisten Websites werden mit einer einzigen Frage gebaut: <strong>Wie kann ich das gut aussehen lassen?</strong> Das ist das Problem.</p>
+      <p>Die Satao-Website war online. Hatte eine Domain. Hatte Text. Hatte Fotos. Und hat trotzdem nichts gebracht — keine Anfragen, keine Spenden, keine neuen Unterstützer. Ich hab mir angeschaut warum. Und dann hab ich sie neu gebaut.</p>
 
-      <p>Gut aussehen und Kunden bringen sind zwei verschiedene Dinge. Eine Website die nur gut ausschaut ist wie ein Schaufenster das niemand findet — oder das zwar gefunden wird, aber keinen Eingang hat.</p>
+      <p>Hier ist was ich konkret geändert hab — und warum.</p>
 
-      <h2>Was eine Website wirklich tun muss</h2>
+      <h2>Das Original-Problem: Eine Website die existiert, aber nicht arbeitet</h2>
 
-      <p>Wenn jemand auf deine Website kommt, hat er drei Sekunden um zu entscheiden ob er bleibt. In diesen drei Sekunden stellt er sich eine Frage: <strong>„Ist das für mich?"</strong></p>
+      <p>Die alte Satao-Seite hatte einen klassischen Fehler: Sie war für den Betreiber gebaut, nicht für den Besucher. Viel Text über die Organisation. Keine klare Frage an den Besucher: <strong>Was soll er jetzt tun?</strong></p>
 
-      <p>Wenn die Antwort nicht sofort klar ist, ist er weg. Zurück zu Google. Zu deinem Mitbewerber.</p>
+      <p>Wenn jemand auf eine Website kommt, hat er drei Sekunden. In diesen drei Sekunden fragt er sich: „Ist das für mich? Was passiert wenn ich hier bleibe?" Wenn die Antwort nicht sofort klar ist — weg. Zurück zu Google.</p>
 
       <div class="highlight">
-        <p>Die wichtigste Zeile auf jeder Website ist die Headline. Nicht das Logo, nicht die Farben — die Headline. Sie muss in einem Satz sagen wer du bist, was du machst, und warum es dem Besucher wichtig ist.</p>
+        <p>Die alte Headline war der Name der Organisation. Die neue Headline ist das, was der Besucher <em>fühlt</em> wenn er geht ohne zu handeln: „Jedes Jahr verschwinden 20.000 Elefanten. Du kannst das ändern."</p>
       </div>
 
-      <h2>Die drei häufigsten Fehler</h2>
+      <h2>Was ich konkret geändert hab</h2>
 
-      <h3>1. Keine klare Handlungsaufforderung</h3>
-      <p>Was soll der Besucher tun? Anrufen? Schreiben? Buchen? Wenn das nicht offensichtlich ist, macht er gar nichts. Ein klarer CTA — sichtbar, einmal, above the fold — verdoppelt die Conversion in vielen Fällen.</p>
+      <h3>1. Headline: Vom Namen zur Mission</h3>
+      <p>Niemand sucht „Satao". Die meisten landen über Google oder Social auf der Seite und wissen nicht wer Satao ist. Die alte Headline setzte voraus dass man es schon weiß. Die neue Headline macht in einem Satz klar was auf dem Spiel steht — und warum jetzt handeln wichtig ist.</p>
 
-      <h3>2. Über das Unternehmen statt über den Kunden</h3>
-      <p>„Wir sind seit 1998 tätig und bieten hochwertige Leistungen..." — wen interessiert das? Den Kunden interessiert nur eine Sache: Was habe ich davon? Schreib über den Kunden, nicht über dich.</p>
+      <h3>2. Ein einziger CTA, above the fold</h3>
+      <p>Die alte Seite hatte fünf verschiedene Links im oberen Bereich. Der Besucher wusste nicht wo klicken. Die neue Version hat genau einen Button, der in Acid-Green leuchtet: „Jetzt unterstützen." Mehr braucht es nicht.</p>
 
-      <h3>3. Kein Social Proof</h3>
-      <p>Bewertungen, echte Fotos, konkrete Ergebnisse. Menschen kaufen was andere empfehlen. Ohne Social Proof kauft niemand von dir, egal wie gut die Website aussieht.</p>
+      <h3>3. Social Proof sofort sichtbar</h3>
+      <p>Zahlen überzeugen. Wie viele Elefanten wurden gerettet? Wie viele Unterstützer gibt es? Wie viel Prozent der Spenden gehen direkt in den Schutz? Das stand auf der alten Seite irgendwo. Auf der neuen steht es im Hero — damit man es sieht bevor man scrollt.</p>
 
-      <h2>Was du heute ändern kannst</h2>
+      <h3>4. Mobiloptimierung von Grund auf</h3>
+      <p>70% der Besucher kamen über Handy. Die alte Seite war dafür nicht gebaut — Text zu klein, Buttons zu nah beisammen, Bilder beschnitten. Ich hab von Mobile-First neu entwickelt. Dasselbe Design, aber für den Kanal der tatsächlich genutzt wird.</p>
 
-      <ul>
-        <li>Lies deine Headline laut vor. Würde ein Fremder in 3 Sekunden verstehen was du machst?</li>
-        <li>Zähl deine CTAs. Wenn du keinen hast, füge einen ein. Wenn du fünf hast, streiche vier.</li>
-        <li>Füge eine echte Kundenbewertung hinzu. Auch eine reicht.</li>
-      </ul>
+      <h2>Das Ergebnis</h2>
 
-      <p>Das sind keine Design-Entscheidungen. Das sind Business-Entscheidungen. Und sie kosten nichts außer 30 Minuten Zeit.</p>
+      <p>Mehr Spenden, mehr Zeit auf der Seite, weniger Absprünge. Keine Magie. Nur ein Design das die Fragen beantwortet die ein Besucher wirklich hat — bevor er sie stellen muss.</p>
 
-      <!-- ═══════════════════════════════════════════
-           ENDE INHALT
-      ════════════════════════════════════════════ -->
+      <p>Das ist der Unterschied zwischen einer Website die existiert und einer die arbeitet.</p>
 
       <div class="post-cta">
-        <h3>Deine Website hat diese Probleme?</h3>
-        <p>Ich schau sie mir kostenlos an und sag dir direkt was nicht stimmt — in 15 Minuten.</p>
-        <a class="btn btn-acid" href="../index.html#contact">Kostenloses Gespräch →</a>
+        <h3>Deine Website könnte auch so aussehen.</h3>
+        <p>Schick mir deinen Link. Ich bau dir in 48h eine kostenlose Demo — wie deine neue Website aussehen könnte. Kein Gespräch, kein Druck, kein Vertrag.</p>
+        <a class="btn btn-acid" href="https://wa.me/4367764278292?text=Hey%20Maximilian%2C%20hier%20ist%20mein%20Website-Link%3A%20" target="_blank" rel="noopener">Demo anfordern (WhatsApp) →</a>
       </div>
 
       <a class="back-link" href="../blog.html">← Zurück zum Blog</a>

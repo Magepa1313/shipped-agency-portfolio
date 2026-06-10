@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Warum deine Website keine Kunden bringt — Maximilian Kürner</title>
-  <meta name="description" content="Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen. Das ist der Unterschied zwischen einer Website und einem Werkzeug." />
+  <title>Warum Agenturen Monate brauchen und ich 48 Stunden — Maximilian Kürner</title>
+  <meta name="description" content="Deine Agentur ist seit 8 Wochen am 'Konzept'. Ich liefere dir in 48 Stunden eine fertige Demo. Nicht weil ich schneller klicke — das System ist anders." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html" />
+  <link rel="canonical" href="https://maximiliankuerner.at/posts/warum-ich-websites-in-48h-liefere.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Warum deine Website keine Kunden bringt" />
-  <meta property="og:description" content="Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen." />
-  <meta property="og:url" content="https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html" />
-  <meta property="article:published_time" content="2026-05-22" />
+  <meta property="og:title" content="Warum Agenturen Monate brauchen und ich 48 Stunden" />
+  <meta property="og:description" content="Deine Agentur ist seit 8 Wochen am 'Konzept'. Ich liefere dir in 48 Stunden eine fertige Demo." />
+  <meta property="og:url" content="https://maximiliankuerner.at/posts/warum-ich-websites-in-48h-liefere.html" />
+  <meta property="article:published_time" content="2026-05-15" />
   <meta property="article:author" content="Maximilian Kürner" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Warum deine Website keine Kunden bringt — und wie du das fixst",
+    "headline": "Warum Agenturen Monate brauchen und ich 48 Stunden",
     "author": { "@type": "Person", "name": "Maximilian Kürner" },
-    "datePublished": "2026-05-22",
-    "description": "Die meisten Websites sind gebaut um gut auszusehen. Nicht um zu verkaufen.",
-    "url": "https://maximiliankuerner.at/posts/warum-deine-website-keine-kunden-bringt.html"
+    "datePublished": "2026-05-15",
+    "description": "Deine Agentur ist seit 8 Wochen am 'Konzept'. Ich liefere dir in 48 Stunden eine fertige Demo.",
+    "url": "https://maximiliankuerner.at/posts/warum-ich-websites-in-48h-liefere.html"
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=bricolage-grotesque:400,700,800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #06070c;
@@ -59,8 +58,27 @@
     .nav-logo-name { display: flex; flex-direction: column; line-height: 1.15; }
     .nav-logo-name .ln1 { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
     .nav-logo-name .ln2 { font-size: 1rem; font-weight: 800; letter-spacing: -.02em; }
-    .nav-mark { width: 40px; height: 40px; background: var(--acid); border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; }
-    .nav-mark svg { width: 22px; height: 15px; }
+    .nav-mark {
+      width: 38px;
+      height: 38px;
+      background: rgba(200,255,0,.06);
+      border: 1.5px solid rgba(200,255,0,.28);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-size: .88rem;
+      font-weight: 800;
+      color: var(--acid);
+      letter-spacing: -.04em;
+      user-select: none;
+      transition: border-color .22s, background .22s;
+    }
+    .nav-mark:hover {
+      border-color: rgba(200,255,0,.55);
+      background: rgba(200,255,0,.1);
+    }
     .nav-links { display: flex; gap: 28px; }
     .nav-link { font-size: .875rem; font-weight: 600; color: var(--muted); transition: color var(--tr); }
     .nav-link:hover { color: var(--text); }
@@ -101,14 +119,7 @@
     <div class="wrap">
       <div class="nav-inner">
         <a class="nav-logo" href="../index.html">
-          <div class="nav-mark">
-            <svg viewBox="0 0 22 15" fill="none" stroke="#06070c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="1,14 1,1 5.5,8 10,1 10,14" />
-              <line x1="13" y1="1" x2="13" y2="14" />
-              <line x1="13" y1="7.5" x2="21" y2="1" />
-              <line x1="13" y1="7.5" x2="21" y2="14" />
-            </svg>
-          </div>
+          <div class="nav-mark" aria-hidden="true">mk</div>
           <div class="nav-logo-name">
             <span class="ln1">Webdesign Freelance</span>
             <span class="ln2">Maximilian Kürner</span>
@@ -126,10 +137,10 @@
   </nav>
 
   <div class="post-header">
-    <div class="post-tag">Conversion</div>
-    <h1 class="post-title">Warum deine Website keine Kunden bringt — und wie du das fixst</h1>
+    <div class="post-tag">Prozess</div>
+    <h1 class="post-title">Warum Agenturen Monate brauchen und ich 48 Stunden</h1>
     <div class="post-meta">
-      <span>22. Mai 2026</span>
+      <span>15. Mai 2026</span>
       <span>·</span>
       <span>3 min Lesezeit</span>
     </div>
@@ -140,53 +151,53 @@
 
       <a class="back-link" href="../blog.html">← Zurück zum Blog</a>
 
-      <!-- ═══════════════════════════════════════════
-           INHALT — hier schreiben oder ersetzen
-      ════════════════════════════════════════════ -->
+      <p>Du rufst bei einer Agentur an. Erstgespräch: Woche 1. Angebot: Woche 2. Kickoff: Woche 4. „Erstes Design": Woche 8. Du schaust es an, merkst dass es nicht passt, gibst Feedback. Woche 10. Woche 12. Abnahme irgendwann im Sommer.</p>
 
-      <p>Die meisten Websites werden mit einer einzigen Frage gebaut: <strong>Wie kann ich das gut aussehen lassen?</strong> Das ist das Problem.</p>
+      <p><strong>Drei Monate. Für eine Website.</strong> In denen du kein einziges Mal die neue Seite gesehen hast — nur PDF-Mockups und Zoom-Calls.</p>
 
-      <p>Gut aussehen und Kunden bringen sind zwei verschiedene Dinge. Eine Website die nur gut ausschaut ist wie ein Schaufenster das niemand findet — oder das zwar gefunden wird, aber keinen Eingang hat.</p>
+      <p>Ich liefere eine fertige, klickbare Demo in 48 Stunden. Nicht weil ich schneller klicke. Weil das System komplett anders ist.</p>
 
-      <h2>Was eine Website wirklich tun muss</h2>
+      <h2>Warum Agenturen so lange brauchen</h2>
 
-      <p>Wenn jemand auf deine Website kommt, hat er drei Sekunden um zu entscheiden ob er bleibt. In diesen drei Sekunden stellt er sich eine Frage: <strong>„Ist das für mich?"</strong></p>
+      <p>Agenturen haben Strukturen die Zeit kosten: Account Manager, Design-Team, Development-Team, Projektmanager, Feedback-Schleifen, interne Abstimmungen, Kapazitätsplanung. Jede Person in der Kette braucht Briefings, Abnahmen, Übergaben.</p>
 
-      <p>Wenn die Antwort nicht sofort klar ist, ist er weg. Zurück zu Google. Zu deinem Mitbewerber.</p>
+      <p>Das ist kein Vorwurf. Das ist der Preis ihrer Größe.</p>
 
       <div class="highlight">
-        <p>Die wichtigste Zeile auf jeder Website ist die Headline. Nicht das Logo, nicht die Farben — die Headline. Sie muss in einem Satz sagen wer du bist, was du machst, und warum es dem Besucher wichtig ist.</p>
+        <p>Für dich bedeutet das: Du wartest. Und während du wartest, verliert deine alte Website jeden Monat Kunden. Du zahlst die Agentur — und deine schlechte Website gleichzeitig.</p>
       </div>
 
-      <h2>Die drei häufigsten Fehler</h2>
+      <h2>Mein System funktioniert anders</h2>
 
-      <h3>1. Keine klare Handlungsaufforderung</h3>
-      <p>Was soll der Besucher tun? Anrufen? Schreiben? Buchen? Wenn das nicht offensichtlich ist, macht er gar nichts. Ein klarer CTA — sichtbar, einmal, above the fold — verdoppelt die Conversion in vielen Fällen.</p>
+      <h3>Kein Briefing. Kein Konzept. Kein Mockup.</h3>
+      <p>Ich analysiere deine bestehende Website, deine Branche, deine Konkurrenz — und baue sofort. Die Demo ist das Konzept. Du siehst keine Skizze, du siehst ein echtes Ergebnis im Browser.</p>
 
-      <h3>2. Über das Unternehmen statt über den Kunden</h3>
-      <p>„Wir sind seit 1998 tätig und bieten hochwertige Leistungen..." — wen interessiert das? Den Kunden interessiert nur eine Sache: Was habe ich davon? Schreib über den Kunden, nicht über dich.</p>
+      <h3>Demo first. Entscheidung danach.</h3>
+      <p>Du schickst mir deinen Website-Link. 48 Stunden später schick ich dir einen Link zur Demo. Du öffnest sie auf deinem Handy. Du siehst sofort ob es dir gefällt oder nicht. Kein Meeting nötig. Kein Druck. Kein Formular.</p>
 
-      <h3>3. Kein Social Proof</h3>
-      <p>Bewertungen, echte Fotos, konkrete Ergebnisse. Menschen kaufen was andere empfehlen. Ohne Social Proof kauft niemand von dir, egal wie gut die Website aussieht.</p>
+      <h3>Feedback in einer Runde.</h3>
+      <p>Wenn du etwas ändern willst, sagst du es mir. Eine Runde Anpassungen — dann ist es fertig. Keine fünf Feedback-Schleifen, keine drei Wochen Wartezeit.</p>
 
-      <h2>Was du heute ändern kannst</h2>
+      <h2>Was das für dich bedeutet</h2>
 
-      <ul>
-        <li>Lies deine Headline laut vor. Würde ein Fremder in 3 Sekunden verstehen was du machst?</li>
-        <li>Zähl deine CTAs. Wenn du keinen hast, füge einen ein. Wenn du fünf hast, streiche vier.</li>
-        <li>Füge eine echte Kundenbewertung hinzu. Auch eine reicht.</li>
-      </ul>
+      <p>Während du bei einer Agentur noch im Onboarding bist, hast du bei mir schon eine fertige Website live. Eine Website die Kunden bringt. Eine die auf deinem Handy funktioniert. Eine die du dir vorher angeschaut und abgenickt hast.</p>
 
-      <p>Das sind keine Design-Entscheidungen. Das sind Business-Entscheidungen. Und sie kosten nichts außer 30 Minuten Zeit.</p>
+      <p>Und wenn sie dir nicht gefällt? Ich lösch sie. Du hast nichts gezahlt.</p>
 
-      <!-- ═══════════════════════════════════════════
-           ENDE INHALT
-      ════════════════════════════════════════════ -->
+      <div class="highlight">
+        <p>750€ einmalig. 48 Stunden bis zur Demo. Kein Risiko auf deiner Seite. Das Risiko liegt bei mir — genau dort wo es hingehört.</p>
+      </div>
+
+      <h2>Warum ich das so mache</h2>
+
+      <p>Weil ein Angebot das du nicht siehst bevor du zahlst kein faires Angebot ist. Und weil ich überzeugt bin dass meine Arbeit für sich spricht — wenn ich dir einfach zeige was möglich ist.</p>
+
+      <p>Agenturen können sich das nicht leisten. Sie haben Overheads die abgedeckt werden müssen bevor auch nur eine Zeile Code geschrieben wird. Ich nicht.</p>
 
       <div class="post-cta">
-        <h3>Deine Website hat diese Probleme?</h3>
-        <p>Ich schau sie mir kostenlos an und sag dir direkt was nicht stimmt — in 15 Minuten.</p>
-        <a class="btn btn-acid" href="../index.html#contact">Kostenloses Gespräch →</a>
+        <h3>48 Stunden bis zu deiner Demo.</h3>
+        <p>Schick mir deinen Website-Link. Ich baue dir kostenlos eine Demo — damit du siehst was möglich ist, bevor du irgendwas entscheidest.</p>
+        <a class="btn btn-acid" href="https://wa.me/4367764278292?text=Hey%20Maximilian%2C%20hier%20ist%20mein%20Website-Link%3A%20" target="_blank" rel="noopener">Demo anfordern (WhatsApp) →</a>
       </div>
 
       <a class="back-link" href="../blog.html">← Zurück zum Blog</a>

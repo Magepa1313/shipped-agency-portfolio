@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung — Maximilian Kürner</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://maximiliankuerner.at/datenschutz" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=bricolage-grotesque:400,700,800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06070c;
+      --acid: #c8ff00;
+      --text: #f0f0f0;
+      --muted: rgba(240, 240, 240, 0.42);
+      --bord: rgba(255, 255, 255, 0.08);
+      --surf: rgba(255, 255, 255, 0.04);
+      --font: 'Bricolage Grotesque', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: var(--acid); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    nav { padding: 20px 0; border-bottom: 1px solid var(--bord); background: rgba(6,7,12,.82); backdrop-filter: blur(24px); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--text); }
+    .nav-mark {
+      width: 36px; height: 36px;
+      background: rgba(200,255,0,.06);
+      border: 1.5px solid rgba(200,255,0,.28);
+      border-radius: 8px;
+      display: grid; place-items: center;
+      font-size: .84rem; font-weight: 800;
+      color: var(--acid); letter-spacing: -.04em;
+      user-select: none;
+    }
+    .nav-name { font-size: .92rem; font-weight: 800; letter-spacing: -.02em; }
+    .back { font-size: .85rem; font-weight: 600; color: var(--muted); transition: color .2s; }
+    .back:hover { color: var(--text); text-decoration: none; }
+
+    main { padding: 72px 0 120px; }
+    .ey { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--acid); margin-bottom: 14px; }
+    h1 { font-size: clamp(2rem,5vw,3rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 12px; }
+    .legal-sub { font-size: .82rem; color: var(--muted); margin-bottom: 48px; }
+
+    .block { border: 1px solid var(--bord); border-radius: 16px; background: var(--surf); padding: 32px; margin-bottom: 20px; }
+    .block h2 { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--acid); margin-bottom: 16px; }
+    .block p, .block ul { font-size: .96rem; color: var(--muted); line-height: 1.75; }
+    .block p + p { margin-top: 10px; }
+    .block ul { padding-left: 20px; margin-top: 10px; }
+    .block ul li { margin-bottom: 6px; }
+
+    footer { padding: 22px 0; border-top: 1px solid var(--bord); }
+    .ft { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .ft-copy { font-size: .8rem; color: var(--muted); }
+    .ft-links { display: flex; gap: 20px; }
+    .ft-links a { font-size: .8rem; color: var(--muted); transition: color .2s; text-decoration: none; }
+    .ft-links a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="nav-logo" href="index.html">
+        <div class="nav-mark" aria-hidden="true">mk</div>
+        <span class="nav-name">Maximilian Kürner</span>
+      </a>
+      <a class="back" href="index.html">← Zurück zur Website</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <div class="ey">// Legal</div>
+      <h1>Datenschutzerklärung</h1>
+      <p class="legal-sub">Informationspflichten gemäß Art. 13 DSGVO. Stand: Juni 2026.</p>
+
+      <div class="block">
+        <h2>1. Verantwortlicher (Art. 13 Abs. 1 lit. a DSGVO)</h2>
+        <p>Maximilian Kürner, Dragonerstraße 54, 4600 Wels, Österreich<br>
+        E-Mail: <a href="mailto:magepa.twitch@gmail.com">magepa.twitch@gmail.com</a><br>
+        WhatsApp: <a href="https://wa.me/4367764278292" target="_blank" rel="noopener">+43 677 64278292</a></p>
+      </div>
+
+      <div class="block">
+        <h2>2. Allgemeines zur Datenverarbeitung</h2>
+        <p>Diese Website erhebt und verarbeitet personenbezogene Daten nur im technisch notwendigen Umfang. Es werden keine Cookies gesetzt, kein Tracking-Tool und keine Analyse-Software eingesetzt. Die Website ist vollständig cookie-frei.</p>
+        <p>Beim Aufruf der Website werden durch den Webserver automatisch technische Verbindungsdaten (sog. Server-Logs) erfasst: IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, Browsertyp und Betriebssystem. Diese Daten dienen ausschließlich der sicheren technischen Bereitstellung und werden nicht zur Identifizierung von Personen verwendet.</p>
+      </div>
+
+      <div class="block">
+        <h2>3. Hosting (Vercel)</h2>
+        <p>Diese Website wird über Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA gehostet. Bei jedem Seitenaufruf erfasst Vercel technische Verbindungsdaten (IP-Adresse, Browser, Betriebssystem, Zeitstempel). Rechtsgrundlage: berechtigtes Interesse gem. Art. 6 Abs. 1 lit. f DSGVO (technischer Betrieb der Website).</p>
+        <p>Ich habe mit Vercel einen Auftragsverarbeitungsvertrag (AVV/DPA) gemäß Art. 28 DSGVO abgeschlossen. Soweit Daten in die USA übertragen werden, erfolgt dies auf Basis von Standardvertragsklauseln gem. Art. 46 Abs. 2 lit. c DSGVO.</p>
+        <p>Datenschutzrichtlinie Vercel: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></p>
+      </div>
+
+      <div class="block">
+        <h2>4. Schriftarten (Bunny Fonts)</h2>
+        <p>Diese Website verwendet Schriftarten des Dienstes Bunny Fonts (Anbieter: BunnyWay d.o.o., Cesta komandanta Staneta 4A, 1215 Medvode, Slowenien). Bunny Fonts ist eine datenschutzfreundliche Alternative zu Google Fonts — die Server befinden sich ausschließlich in der EU, es findet kein Drittlandtransfer statt.</p>
+        <p>Beim Laden der Schriftarten wird eine Verbindung zu <code style="color:var(--acid);font-size:.88em;">fonts.bunny.net</code> hergestellt und Ihre IP-Adresse übertragen. Rechtsgrundlage: berechtigtes Interesse gem. Art. 6 Abs. 1 lit. f DSGVO (einheitliche Darstellung der Website).</p>
+        <p>Datenschutzinformationen Bunny Fonts: <a href="https://bunny.net/privacy" target="_blank" rel="noopener">bunny.net/privacy</a></p>
+      </div>
+
+      <div class="block">
+        <h2>5. Kontaktaufnahme (E-Mail / WhatsApp)</h2>
+        <p>Wenn Sie per E-Mail oder WhatsApp Kontakt aufnehmen, werden die übermittelten Daten (Name, Nachrichteninhalt, Kontaktdaten) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen).</p>
+        <p>Für WhatsApp gilt die Datenschutzrichtlinie von WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a></p>
+      </div>
+
+      <div class="block">
+        <h2>6. Externe Links (LinkedIn, WhatsApp)</h2>
+        <p>Die Website enthält Links zu LinkedIn (LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland) und WhatsApp. Beim Klick auf diese Links verlassen Sie diese Website. Für die Datenverarbeitung auf den verlinkten Plattformen sind deren eigene Datenschutzrichtlinien maßgeblich.</p>
+      </div>
+
+      <div class="block">
+        <h2>7. Eingebettete externe Inhalte</h2>
+        <p>Die Website kann iFrame-Inhalte (z. B. Live-Vorschauen von Kundenwebsites) einbetten. Beim Laden dieser Inhalte kann die IP-Adresse des Nutzers an den jeweiligen Server übertragen werden. Rechtsgrundlage: berechtigtes Interesse gem. Art. 6 Abs. 1 lit. f DSGVO (Darstellung von Arbeitsproben).</p>
+      </div>
+
+      <div class="block">
+        <h2>8. Ihre Rechte als betroffene Person (Art. 15–21 DSGVO)</h2>
+        <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+        <ul>
+          <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+          <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+          <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+          <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+        </ul>
+        <p style="margin-top:16px;">Für Anfragen: <a href="mailto:magepa.twitch@gmail.com">magepa.twitch@gmail.com</a></p>
+        <p>Sie haben das Recht, Beschwerde bei der österreichischen Datenschutzbehörde einzulegen:<br>
+        Österreichische Datenschutzbehörde (DSB), Barichgasse 40–42, 1030 Wien<br>
+        <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a> | dsb@dsb.gv.at</p>
+      </div>
+
+      <div class="block">
+        <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+        <p>Diese Datenschutzerklärung wird bei wesentlichen Änderungen der Website oder der Rechtslage aktualisiert. Die aktuelle Version ist stets unter <a href="https://maximiliankuerner.at/datenschutz" target="_blank" rel="noopener">maximiliankuerner.at/datenschutz</a> abrufbar.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap ft">
+      <div class="ft-copy">© <script>document.write(new Date().getFullYear())</script> Maximilian Kürner</div>
+      <nav class="ft-links" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
