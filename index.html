@@ -2232,10 +2232,9 @@
       <!-- Comparison Slider - Framer Side-By-Side Slider port -->
       <div class="cs rv d1" id="cs" role="img" aria-label="Vorher-Nachher Website-Vergleich">
 
-        <!-- AFTER (bottom) - echte Satao Website live -->
+        <!-- AFTER (bottom) - Satao Website Nachher -->
         <div class="cs-p" aria-hidden="true" style="background:#111;">
-          <iframe src="https://www.satao.at/Startseite/" title="Satao - neue Website" loading="lazy" scrolling="no" sandbox="allow-scripts allow-same-origin"></iframe>
-          <img class="cs-mobile-img" src="nachher-clean.png" alt="Satao - neue Website" loading="lazy" decoding="async" />
+          <img src="nachher.png" alt="Satao - neue Website" loading="lazy" decoding="async" />
         </div>
 
         <!-- BEFORE (top, clipped) - alte Satao Website -->
@@ -2921,27 +2920,6 @@
       const line = document.getElementById('cs-line');
       const knob = document.getElementById('cs-knob');
       if (!wrap || !before || !line || !knob) return;
-
-      // Dynamic iframe scaling based on container size
-      const iframes = wrap.querySelectorAll('.cs-p iframe');
-      function scaleIframes() {
-        const wrapW = wrap.offsetWidth;
-        const wrapH = wrap.offsetHeight;
-        iframes.forEach(function(iframe) {
-          const iframeW = 1280;
-          const iframeH = 960;
-          const scaleX = wrapW / iframeW;
-          const scaleY = wrapH / iframeH;
-          const scale = Math.max(scaleX, scaleY);
-          iframe.style.transform = 'scale(' + scale + ')';
-        });
-      }
-      scaleIframes();
-      if (typeof ResizeObserver !== 'undefined') {
-        new ResizeObserver(scaleIframes).observe(wrap);
-      } else {
-        window.addEventListener('resize', scaleIframes);
-      }
 
       let pos = 50, tgt = 50, down = false;
 
