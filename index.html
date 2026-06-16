@@ -1632,6 +1632,12 @@
       #cd {
         display: none;
       }
+
+      .rv {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
     }
 
     /* ── Pain */
@@ -2720,95 +2726,97 @@
     const ease = [0.22, 1, 0.36, 1];
     const spring = { easing: [0.34, 1.56, 0.64, 1], duration: 0.5 };
 
-    // About rows - slide in with stagger
-    document.querySelectorAll('.about-row').forEach(r => {
-      r.style.opacity = '0'; r.style.transform = 'translateX(18px)';
-    });
-    inView('.about-card', () => {
-      animate('.about-row',
-        { opacity: [0, 1], transform: ['translateX(18px)', 'translateX(0px)'] },
-        { delay: stagger(0.13), easing: ease, duration: 0.5 });
-    }, { amount: 0.25 });
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+      // About rows - slide in with stagger
+      document.querySelectorAll('.about-row').forEach(r => {
+        r.style.opacity = '0'; r.style.transform = 'translateX(18px)';
+      });
+      inView('.about-card', () => {
+        animate('.about-row',
+          { opacity: [0, 1], transform: ['translateX(18px)', 'translateX(0px)'] },
+          { delay: stagger(0.13), easing: ease, duration: 0.5 });
+      }, { amount: 0.25 });
 
-    // Skill pills - pop in with spring stagger
-    document.querySelectorAll('.skill-pills .pill').forEach(p => {
-      p.style.opacity = '0'; p.style.transform = 'scale(0.78)';
-    });
-    inView('.skill-pills', () => {
-      animate('.skill-pills .pill',
-        { opacity: [0, 1], transform: ['scale(0.78)', 'scale(1)'] },
-        { delay: stagger(0.055), ...spring });
-    }, { amount: 0.3 });
+      // Skill pills - pop in with spring stagger
+      document.querySelectorAll('.skill-pills .pill').forEach(p => {
+        p.style.opacity = '0'; p.style.transform = 'scale(0.78)';
+      });
+      inView('.skill-pills', () => {
+        animate('.skill-pills .pill',
+          { opacity: [0, 1], transform: ['scale(0.78)', 'scale(1)'] },
+          { delay: stagger(0.055), ...spring });
+      }, { amount: 0.3 });
 
-    // VS summary card - scale pop on entry
-    inView('.vs-summary', () => {
-      animate('.vs-summary',
-        { opacity: [0, 1], transform: ['scale(0.96) translateY(16px)', 'scale(1) translateY(0px)'] },
-        { easing: ease, duration: 0.55 });
-    }, { amount: 0.3 });
+      // VS summary card - scale pop on entry
+      inView('.vs-summary', () => {
+        animate('.vs-summary',
+          { opacity: [0, 1], transform: ['scale(0.96) translateY(16px)', 'scale(1) translateY(0px)'] },
+          { easing: ease, duration: 0.55 });
+      }, { amount: 0.3 });
 
-    // Pain cards - stagger with spring bounce
-    inView('.pain-grid', () => {
-      animate('.pain-card',
-        { opacity: [0, 1], transform: ['translateY(28px)', 'translateY(0px)'] },
-        { delay: stagger(0.09), easing: ease, duration: 0.52 });
-    }, { amount: 0.15 });
+      // Pain cards - stagger with spring bounce
+      inView('.pain-grid', () => {
+        animate('.pain-card',
+          { opacity: [0, 1], transform: ['translateY(28px)', 'translateY(0px)'] },
+          { delay: stagger(0.09), easing: ease, duration: 0.52 });
+      }, { amount: 0.15 });
 
-    // Proc steps - stagger
-    inView('.proc-grid', () => {
-      animate('.proc-step',
-        { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0px)'] },
-        { delay: stagger(0.1), easing: ease, duration: 0.5 });
-    }, { amount: 0.15 });
+      // Proc steps - stagger
+      inView('.proc-grid', () => {
+        animate('.proc-step',
+          { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0px)'] },
+          { delay: stagger(0.1), easing: ease, duration: 0.5 });
+      }, { amount: 0.15 });
 
-    // FAQ items
-    inView('.faq-grid', () => {
-      animate('.faq-item',
-        { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0px)'] },
-        { delay: stagger(0.08), easing: ease, duration: 0.45 });
-    }, { amount: 0.1 });
+      // FAQ items
+      inView('.faq-grid', () => {
+        animate('.faq-item',
+          { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0px)'] },
+          { delay: stagger(0.08), easing: ease, duration: 0.45 });
+      }, { amount: 0.1 });
 
-    // Blog cards
-    inView('.blog-grid', () => {
-      animate('.blog-card',
-        { opacity: [0, 1], transform: ['translateY(28px) scale(0.97)', 'translateY(0px) scale(1)'] },
-        { delay: stagger(0.14), easing: ease, duration: 0.5 });
-    }, { amount: 0.15 });
+      // Blog cards
+      inView('.blog-grid', () => {
+        animate('.blog-card',
+          { opacity: [0, 1], transform: ['translateY(28px) scale(0.97)', 'translateY(0px) scale(1)'] },
+          { delay: stagger(0.14), easing: ease, duration: 0.5 });
+      }, { amount: 0.15 });
 
-    // VS items - slide in from left
-    inView('.vs-list', () => {
-      animate('.vs-item',
-        { opacity: [0, 1], transform: ['translateX(-16px)', 'translateX(0px)'] },
-        { delay: stagger(0.07), easing: ease, duration: 0.42 });
-    }, { amount: 0.1 });
+      // VS items - slide in from left
+      inView('.vs-list', () => {
+        animate('.vs-item',
+          { opacity: [0, 1], transform: ['translateX(-16px)', 'translateX(0px)'] },
+          { delay: stagger(0.07), easing: ease, duration: 0.42 });
+      }, { amount: 0.1 });
 
-    // Upsell steps - pop in with bounce
-    inView('.upsell-row', () => {
-      animate('.upsell-step',
-        { opacity: [0, 1], transform: ['scale(0.85) translateY(12px)', 'scale(1) translateY(0px)'] },
-        { delay: stagger(0.1), ...spring });
-    }, { amount: 0.3 });
+      // Upsell steps - pop in with bounce
+      inView('.upsell-row', () => {
+        animate('.upsell-step',
+          { opacity: [0, 1], transform: ['scale(0.85) translateY(12px)', 'scale(1) translateY(0px)'] },
+          { delay: stagger(0.1), ...spring });
+      }, { amount: 0.3 });
 
-    // Hero stats - count-up style entrance
-    inView('.stats-row', () => {
-      animate('.stat',
-        { opacity: [0, 1], transform: ['translateY(16px)', 'translateY(0px)'] },
-        { delay: stagger(0.12), easing: ease, duration: 0.4 });
-    }, { amount: 0.5 });
+      // Hero stats - count-up style entrance
+      inView('.stats-row', () => {
+        animate('.stat',
+          { opacity: [0, 1], transform: ['translateY(16px)', 'translateY(0px)'] },
+          { delay: stagger(0.12), easing: ease, duration: 0.4 });
+      }, { amount: 0.5 });
 
-    // CTA buttons - spring pop
-    inView('.cta-btns', () => {
-      animate('.cta-btns .btn',
-        { opacity: [0, 1], transform: ['scale(0.88)', 'scale(1)'] },
-        { delay: stagger(0.1), ...spring });
-    }, { amount: 0.5 });
+      // CTA buttons - spring pop
+      inView('.cta-btns', () => {
+        animate('.cta-btns .btn',
+          { opacity: [0, 1], transform: ['scale(0.88)', 'scale(1)'] },
+          { delay: stagger(0.1), ...spring });
+      }, { amount: 0.5 });
 
-    // LM banner entrance
-    inView('.lm-banner', () => {
-      animate('.lm-banner',
-        { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0px)'] },
-        { easing: ease, duration: 0.55 });
-    }, { amount: 0.2 });
+      // LM banner entrance
+      inView('.lm-banner', () => {
+        animate('.lm-banner',
+          { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0px)'] },
+          { easing: ease, duration: 0.55 });
+      }, { amount: 0.2 });
+    }
   </script>
 
   <script>
@@ -2864,7 +2872,7 @@
       gl.uniform1f(uX, 1.1); gl.uniform1f(uY, 0.28); gl.uniform1f(uD, 0.06);
 
       const t0 = performance.now();
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 768px)').matches;
       let running = false, rafId = 0;
 
       function draw(now) {
