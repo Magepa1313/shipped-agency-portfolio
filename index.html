@@ -560,7 +560,7 @@
       cursor: ew-resize;
       user-select: none;
       -webkit-user-select: none;
-      aspect-ratio: 16/9;
+      aspect-ratio: 1914/892;
       max-width: 860px;
       margin: 52px auto 0;
       box-shadow: 0 28px 80px rgba(0, 0, 0, .55);
@@ -2948,6 +2948,7 @@
     // Custom Cursor
     // ─────────────────────────────────────────────────────────────────
     (function () {
+      if (!window.matchMedia('(hover: hover)').matches) return;
       const ring = document.getElementById('cr'), dot = document.getElementById('cd');
       if (!ring || !dot) return;
       let rx = 0, ry = 0, mx = 0, my = 0;
@@ -3007,57 +3008,60 @@
       }, { threshold: 0.1 });
       document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-      // 3D card tilt
-      document.querySelectorAll('.proj-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const r = card.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5;
-          const y = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 7}deg) translateY(-3px)`;
-          card.style.setProperty('--mx', (e.clientX - r.left) / r.width * 100 + '%');
-          card.style.setProperty('--my', (e.clientY - r.top) / r.height * 100 + '%');
+      // 3D card tilt, spotlight, and magnetic button mouse effects (only attach on devices with hover capability)
+      if (window.matchMedia('(hover: hover)').matches) {
+        // 3D card tilt
+        document.querySelectorAll('.proj-card').forEach(card => {
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 7}deg) translateY(-3px)`;
+            card.style.setProperty('--mx', (e.clientX - r.left) / r.width * 100 + '%');
+            card.style.setProperty('--my', (e.clientY - r.top) / r.height * 100 + '%');
+          });
+          card.addEventListener('mouseleave', () => { card.style.transform = ''; });
         });
-        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-      });
+
+        // Spotlight mouse tracking on all interactive cards
+        document.querySelectorAll('.pain-card, .faq-item, .blog-card, .proc-step, .upsell-step').forEach(card => {
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', (e.clientX - r.left) / r.width * 100 + '%');
+            card.style.setProperty('--my', (e.clientY - r.top) / r.height * 100 + '%');
+          });
+        });
+
+        // 3D tilt on about-card too
+        document.querySelectorAll('.about-card').forEach(card => {
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transform = `perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg)`;
+          });
+          card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+        });
+
+        // Magnetic buttons - attract toward cursor, spring back
+        document.querySelectorAll('.btn-acid, .btn-glass').forEach(btn => {
+          let ox = 0, oy = 0;
+          btn.addEventListener('mousemove', e => {
+            const r = btn.getBoundingClientRect();
+            ox = (e.clientX - r.left - r.width / 2) * 0.28;
+            oy = (e.clientY - r.top - r.height / 2) * 0.28;
+            btn.style.transition = 'transform 0.08s linear, box-shadow 0.22s, background 0.22s';
+            btn.style.transform = `translate(${ox}px, ${oy}px)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transition = 'transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s, background 0.22s';
+            btn.style.transform = '';
+            setTimeout(() => { btn.style.transition = ''; }, 650);
+          });
+        });
+      }
 
       document.getElementById('yr').textContent = new Date().getFullYear();
-
-      // Spotlight mouse tracking on all interactive cards
-      document.querySelectorAll('.pain-card, .faq-item, .blog-card, .proc-step, .upsell-step').forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const r = card.getBoundingClientRect();
-          card.style.setProperty('--mx', (e.clientX - r.left) / r.width * 100 + '%');
-          card.style.setProperty('--my', (e.clientY - r.top) / r.height * 100 + '%');
-        });
-      });
-
-      // 3D tilt on about-card too
-      document.querySelectorAll('.about-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const r = card.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5;
-          const y = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = `perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg)`;
-        });
-        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-      });
-
-      // Magnetic buttons - attract toward cursor, spring back
-      document.querySelectorAll('.btn-acid, .btn-glass').forEach(btn => {
-        let ox = 0, oy = 0;
-        btn.addEventListener('mousemove', e => {
-          const r = btn.getBoundingClientRect();
-          ox = (e.clientX - r.left - r.width / 2) * 0.28;
-          oy = (e.clientY - r.top - r.height / 2) * 0.28;
-          btn.style.transition = 'transform 0.08s linear, box-shadow 0.22s, background 0.22s';
-          btn.style.transform = `translate(${ox}px, ${oy}px)`;
-        });
-        btn.addEventListener('mouseleave', () => {
-          btn.style.transition = 'transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s, background 0.22s';
-          btn.style.transform = '';
-          setTimeout(() => { btn.style.transition = ''; }, 650);
-        });
-      });
     })();
 
     // ─────────────────────────────────────────────────────────────────

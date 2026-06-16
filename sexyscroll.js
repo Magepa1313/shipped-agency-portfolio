@@ -9,6 +9,11 @@
     return;
   }
 
+  // Disable smooth scroll on mobile and touch devices to prevent conflicts with native momentum scrolling
+  if (window.matchMedia('(max-width: 768px)').matches || window.matchMedia('(hover: none)').matches) {
+    return;
+  }
+
   // Remove CSS smooth scroll behavior to prevent physics conflicts
   const style = document.createElement('style');
   style.textContent = 'html { scroll-behavior: auto !important; }';
