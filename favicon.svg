@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" width="38" height="38">
-  <rect x="1.5" y="1.5" width="35" height="35" rx="8" fill="#06070c" stroke="#c8ff00" stroke-opacity="0.28" stroke-width="1.5" />
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="'Bricolage Grotesque', system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" fill="#c8ff00" letter-spacing="-0.04em">mk</text>
+  <rect x="0" y="0" width="38" height="38" rx="8" fill="#06070c" />
+  <rect x="1" y="1" width="36" height="36" rx="7.2" fill="none" stroke="#c8ff00" stroke-opacity="0.30" stroke-width="1.4" />
+  <text x="50%" y="51%" dominant-baseline="central" text-anchor="middle"
+        font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+        font-size="15" font-weight="900" fill="#c8ff00" letter-spacing="-0.06em">MK</text>
 </svg>
